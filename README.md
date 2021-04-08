@@ -62,6 +62,8 @@ To configure Sign-In with Apple, perform the following steps in Xcode:
 
 ### Testing Sign-In with Google
 
+ - Important: When using a Mac with Apple Silicon (M1 chip and later) you will need to [open Xcode using Rosetta][21] in order to compile this project. This is required because the Sign-In with Google framework still contains some Intel-specific code. To open Xcode with Rosetta, you can enable the necessary setting using the Get Info inspector: select Xcode in the Finder, then from the toolbar, choose File > Get Info (⌘I).
+
 1. Google Sign-In can now be tested using the iOS simulator – choose an appropriate run destination. Since a custom URL scheme has been defined, a paid Apple developer account, or developer privileges within an organizational Apple Developer program, are required to deploy to an actual device.
 2. In the toolbar, click Run, or choose Product > Run (⌘R). 
 
@@ -158,3 +160,4 @@ To initially learn how to use Google Sign-In as part of a SwiftUI project, I ref
 [18]:https://swifttom.com/2020/09/28/how-to-add-sign-in-with-apple-to-a-swiftui-project/
 [19]:https://medium.com/dev-genius/google-sign-in-with-swiftui-63f8e1deeae6
 [20]:https://www.russellgordon.ca/about/
+[21]:https://www.russellgordon.ca/AuthServicesExample/m1-use-rosetta.png
