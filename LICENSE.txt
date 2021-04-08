@@ -1,4 +1,4 @@
-See this address for Terms of Service for the Google API Terms of Service:
+See this address for the Google API Terms of Service:
 
 https://developers.google.com/terms
 
