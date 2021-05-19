@@ -18,7 +18,7 @@ struct GoogleAuthenticationManager: UIViewRepresentable {
     }
 
     func signIn() {
-        GIDSignIn.sharedInstance()?.presentingViewController = UIApplication.shared.windows.last?.rootViewController
+        GIDSignIn.sharedInstance()?.presentingViewController = UIApplication.shared.windows.first?.rootViewController
         GIDSignIn.sharedInstance()?.signIn()
     }
     

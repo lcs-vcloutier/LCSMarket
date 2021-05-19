@@ -62,7 +62,7 @@ class AppleAuthentication: ObservableObject {
 
             } else {
                 
-                // User is signed out; must set this so that Google button appears
+                // User is signed out; must set this so that Google button appears after app is force-quit or backgrounded
                 self.userStatus = .signedOut
                 
             }
