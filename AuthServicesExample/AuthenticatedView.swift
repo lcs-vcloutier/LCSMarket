@@ -114,9 +114,13 @@ struct AuthenticatedView: View {
         do {
             try newRowInSpreadsheet.encodeAndWriteToEndpoint()
         } catch JSONSendError.encodingFailed {
+            #if DEBUG
             print("DEBUG: Could not encode data to JSON.")
+            #endif
         } catch {
+            #if DEBUG
             print("DEBUG: Something else unexpected went wrong.")
+            #endif
         }
         
         // Track times mood has been shared

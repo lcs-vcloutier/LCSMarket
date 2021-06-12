@@ -28,8 +28,10 @@ struct AppleSignInView: View {
                 case .success (let authenticationResults):
                     
                     // Successful login
+                    #if DEBUG
                     print("DEBUG: ", terminator: "")
                     print("Authorization successful! :\(authenticationResults)")
+                    #endif
                     appleAuthenticationStore.userStatus = .signedIn
                     
                     // Save to UserDefaults that user is signed in
@@ -45,6 +47,7 @@ struct AppleSignInView: View {
                         let email = appleIDCredential.email ?? ""
                         let name = (fullName?.givenName ?? "") + (" ") + (fullName?.familyName ?? "")
                         
+                        #if DEBUG
                         print("DEBUG data returned from authentication credential:")
                         print("---------------------------------------------------")
                         print("userIdentifier is: \(userIdentifier)")
@@ -57,24 +60,29 @@ struct AppleSignInView: View {
                         print("userIdentifier is: \(KeychainItem.currentUserIdentifier)")
                         print("email is: \(KeychainItem.currentUserEmail)")
                         print("name is: \(KeychainItem.currentUserName)")
+                        #endif
                         
                         // NOTE: With Apple Sign-In, the email and name are only provided once, at first "sign up" with the app
                         if !email.isEmpty {
                             
+                            #if DEBUG
                             print("DEBUG: Saving user data to keychain...")
                             print("--------------------------------------")
+                            #endif
                             
                             // Save user info in the device keychain
                             saveItemInKeychain(account: userIdentifierKey, value: userIdentifier)
                             saveItemInKeychain(account: userNameKey, value: name)
                             saveItemInKeychain(account: userEmailKey, value: email)
                             
+                            #if DEBUG
                             // Get user info from device keychain
                             print("DEBUG data returned from keychain:")
                             print("----------------------------------")
                             print("userIdentifier is: \(KeychainItem.currentUserIdentifier)")
                             print("email is: \(KeychainItem.currentUserEmail)")
                             print("name is: \(KeychainItem.currentUserName)")
+                            #endif
                         }
                                                 
                     default:
@@ -82,7 +90,11 @@ struct AppleSignInView: View {
                     }
                     
                 case .failure (let error):
+                    #if DEBUG
                     print("Authorization failed: " + error.localizedDescription)
+                    #else
+                    break
+                    #endif
                 }
                 
             }
@@ -96,7 +108,9 @@ struct AppleSignInView: View {
         do {
             try KeychainItem(service: AppleIdentifiers.bundleID, account: account).saveItem(value)
         } catch {
+            #if DEBUG
             print("Unable to save \(account) with value \(value) to keychain.")
+            #endif
         }
     }
     

@@ -38,8 +38,10 @@ struct NewVisit: Codable {
         }
         
         // DEBUG: What has been encoded?
+        #if DEBUG
         print("Data that will be sent to Sheety is: ")
         print(String(data: encoded, encoding: .utf8)!)
+        #endif
     
         // 2. Prepare a URLRequest to send our encoded data as JSON
         let url = URL(string: Visitors.endpoint)!
@@ -55,13 +57,17 @@ struct NewVisit: Codable {
             guard let responseFromSheety = data else {
                 
                 // Show the error message
+                #if DEBUG
                 print("No data in response: \(error?.localizedDescription ?? "Unknown error")")
+                #endif
                 return
             }
             
+            #if DEBUG
             // The response from Sheety...
             // NOTE: If successful, you should see a JSON object that has the row number of the new entry in the spreadsheet
             print("Sheety service response is: \(String(data: responseFromSheety, encoding: .utf8)!)")
+            #endif
             
         }.resume()
         

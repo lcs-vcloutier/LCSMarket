@@ -146,7 +146,9 @@ struct KeychainItem {
         do {
             try KeychainItem(service: AppleIdentifiers.bundleID, account: userIdentifierKey).deleteItem()
         } catch {
+            #if DEBUG
             print("Unable to delete userIdentifier from keychain")
+            #endif
         }
     }
     
@@ -163,7 +165,9 @@ struct KeychainItem {
         do {
             try KeychainItem(service: AppleIdentifiers.bundleID, account: userNameKey).deleteItem()
         } catch {
+            #if DEBUG
             print("Unable to delete userName from keychain")
+            #endif
         }
     }
     
@@ -180,7 +184,9 @@ struct KeychainItem {
         do {
             try KeychainItem(service: AppleIdentifiers.bundleID, account: userEmailKey).deleteItem()
         } catch {
+            #if DEBUG
             print("Unable to delete userEmail from keychain")
+            #endif
         }
     }
 

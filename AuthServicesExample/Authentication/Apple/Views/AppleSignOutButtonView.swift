@@ -21,8 +21,10 @@ struct AppleSignOutButtonView: View {
         Button(action: {
             
             // DEBUG
+            #if DEBUG
             print("Signing out from Apple...")
             print("-------------------------")
+            #endif
 
             // Mark for the app that the user is signed out of Apple
             appleAuthenticationStore.userStatus = .signedOut

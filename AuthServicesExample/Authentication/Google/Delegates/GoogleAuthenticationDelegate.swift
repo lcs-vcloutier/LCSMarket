@@ -17,9 +17,13 @@ class GoogleAuthenticationDelegate: NSObject, GIDSignInDelegate, ObservableObjec
         
         if let error = error {
             if (error as NSError).code == GIDSignInErrorCode.hasNoAuthInKeychain.rawValue {
+                #if DEBUG
                 print("The user has not signed in before or they have since signed out.")
+                #endif
             } else {
+                #if DEBUG
                 print("\(error.localizedDescription)")
+                #endif
             }
             
             // [START_EXCLUDE silent]
@@ -31,7 +35,9 @@ class GoogleAuthenticationDelegate: NSObject, GIDSignInDelegate, ObservableObjec
         }
         
         // If the previous `error` is null, then the sign-in was succesful
+        #if DEBUG
         print("Successful sign-in!")
+        #endif
         signedIn = true
         
         // [START_EXCLUDE]

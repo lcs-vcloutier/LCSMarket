@@ -22,7 +22,9 @@ class AppleAuthentication: ObservableObject {
     func restoreSignIn() {
         
         // DEBUG
+        #if DEBUG
         print("DEBUG: Restoring sign-in with Apple")
+        #endif
         
         if userStatus == .indeterminate {
             

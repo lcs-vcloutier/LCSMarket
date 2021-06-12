@@ -59,14 +59,18 @@ class VisitorsStore: ObservableObject {
             // Handle the result here – attempt to unwrap optional data provided by task
             guard let dataFromSheety = data else {
                 
+                #if DEBUG
                 // Show the error message
                 print("No data in response from endpoint: \(error?.localizedDescription ?? "Unknown error")")
+                #endif
                 
                 return
             }
             
+            #if DEBUG
             // DEBUG: Print the data received from the Sheety endpoint
             print(String(data: dataFromSheety, encoding: .utf8)!)
+            #endif
             
             // Now decode from JSON into an array of Swift native data types
             
@@ -75,8 +79,10 @@ class VisitorsStore: ObservableObject {
                 // Attempt to decode the raw JSON data into an instance of the Visitors structure
                 let decodedData = try JSONDecoder().decode(Visitors.self, from: dataFromSheety)
                 
+                #if DEBUG
                 // Print a status message to the console
                 print("Data decoded from JSON from Sheety API endpoint successfully")
+                #endif
                 
                 // Update the list of visitors on the main thread
                 DispatchQueue.main.async {
@@ -88,11 +94,13 @@ class VisitorsStore: ObservableObject {
 
             } catch {
                 
+                #if DEBUG
                 // Could not decode the JSON
                 print("Raw JSON data from endpoint could not be decoded.")
                 
                 // Print a useful error message
                 print(error)
+                #endif
 
             }
                             
@@ -109,19 +117,23 @@ class VisitorsStore: ObservableObject {
                 let decoder = JSONDecoder()
                 let decodedData = try decoder.decode(Visitors.self, from: dataFromAppBundle)
                 
+                #if DEBUG
                 // Print a status message to the console
                 print("Successfully decoded data from the JSON file that was obtained from the app bundle")
+                #endif
                 
                 // Set the list of visitors
                 self.visitors.rows = decodedData.rows
                                     
             } catch {
 
+                #if DEBUG
                 // Could not decode the JSON
                 print("Raw JSON data from app bundle could not be decoded.")
 
                 // Print a useful error message
                 print(error)
+                #endif
 
             }
         }
