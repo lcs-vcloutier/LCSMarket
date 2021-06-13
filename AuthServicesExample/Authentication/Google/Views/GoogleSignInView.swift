@@ -9,14 +9,31 @@ import SwiftUI
 
 struct GoogleSignInView: View {
     
+    // To allow us to determine color scheme of device
+    @Environment(\.colorScheme) var colorScheme
+
     var body: some View {
         
-        GoogleSignInButton()
-            .frame(width: 210, height: 50, alignment: .center)
-            .padding()
-            .onTapGesture {
-                GoogleAuthenticationManager().signIn()
-            }
+        if colorScheme == .dark {
+            
+            GoogleSignInButtonDark()
+                .frame(width: 210, height: 50, alignment: .center)
+                .padding()
+                .onTapGesture {
+                    GoogleAuthenticationManager().signIn()
+                }
+
+        } else {
+
+            GoogleSignInButtonLight()
+                .frame(width: 210, height: 50, alignment: .center)
+                .padding()
+                .onTapGesture {
+                    GoogleAuthenticationManager().signIn()
+                }
+
+        }
+        
         
     }
     

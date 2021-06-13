@@ -21,6 +21,8 @@
 		8163F2A0261DD468006032CF /* GoogleSignIn.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 81DB273F2619C64100F7C0CF /* GoogleSignIn.framework */; };
 		8163F2A1261DD468006032CF /* GoogleSignInDependencies.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 81DB27412619C64100F7C0CF /* GoogleSignInDependencies.framework */; };
 		8163F2B4261E2A8A006032CF /* Keys.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8163F2B3261E2A8A006032CF /* Keys.swift */; };
+		8185341F26762B6600B7EE2F /* GoogleSignInButtonLight.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8185341E26762B6600B7EE2F /* GoogleSignInButtonLight.swift */; };
+		8185342126762B6B00B7EE2F /* GoogleSignInButtonDark.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8185342026762B6B00B7EE2F /* GoogleSignInButtonDark.swift */; };
 		8185F1EA261B42490063142D /* KeychainItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8185F1E9261B42490063142D /* KeychainItem.swift */; };
 		8185F1FC261C876F0063142D /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8185F1FB261C876F0063142D /* Constants.swift */; };
 		8185F209261C9C760063142D /* GoogleSignOutButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8185F208261C9C760063142D /* GoogleSignOutButtonView.swift */; };
@@ -38,7 +40,6 @@
 		81DB274C2619C72B00F7C0CF /* AuthenticationServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 81DB274B2619C72B00F7C0CF /* AuthenticationServices.framework */; };
 		81DB274E2619C73300F7C0CF /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 81DB274D2619C73300F7C0CF /* SystemConfiguration.framework */; };
 		81DB27542619CAF000F7C0CF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81DB27532619CAF000F7C0CF /* AppDelegate.swift */; };
-		81DB27572619CBCC00F7C0CF /* GoogleSignInButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81DB27562619CBCC00F7C0CF /* GoogleSignInButton.swift */; };
 		81DB275A2619CC8300F7C0CF /* GoogleAuthenticationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81DB27592619CC8300F7C0CF /* GoogleAuthenticationManager.swift */; };
 		81DB275D2619CDFE00F7C0CF /* GoogleSignInView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81DB275C2619CDFE00F7C0CF /* GoogleSignInView.swift */; };
 		81FE7D582619DD0900F612B7 /* GoogleAuthenticationDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81FE7D572619DD0900F612B7 /* GoogleAuthenticationDelegate.swift */; };
@@ -60,6 +61,8 @@
 		8163F295261DD02D006032CF /* JSONSendError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JSONSendError.swift; sourceTree = "<group>"; };
 		8163F2B2261E268A006032CF /* LICENSE.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = LICENSE.txt; sourceTree = "<group>"; };
 		8163F2B3261E2A8A006032CF /* Keys.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Keys.swift; sourceTree = "<group>"; };
+		8185341E26762B6600B7EE2F /* GoogleSignInButtonLight.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GoogleSignInButtonLight.swift; sourceTree = "<group>"; };
+		8185342026762B6B00B7EE2F /* GoogleSignInButtonDark.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GoogleSignInButtonDark.swift; sourceTree = "<group>"; };
 		8185F1E9261B42490063142D /* KeychainItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeychainItem.swift; sourceTree = "<group>"; };
 		8185F1F8261C7F080063142D /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		8185F1FB261C876F0063142D /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
@@ -83,7 +86,6 @@
 		81DB274B2619C72B00F7C0CF /* AuthenticationServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AuthenticationServices.framework; path = System/Library/Frameworks/AuthenticationServices.framework; sourceTree = SDKROOT; };
 		81DB274D2619C73300F7C0CF /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
 		81DB27532619CAF000F7C0CF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		81DB27562619CBCC00F7C0CF /* GoogleSignInButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoogleSignInButton.swift; sourceTree = "<group>"; };
 		81DB27592619CC8300F7C0CF /* GoogleAuthenticationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoogleAuthenticationManager.swift; sourceTree = "<group>"; };
 		81DB275C2619CDFE00F7C0CF /* GoogleSignInView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoogleSignInView.swift; sourceTree = "<group>"; };
 		81FE7D572619DD0900F612B7 /* GoogleAuthenticationDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoogleAuthenticationDelegate.swift; sourceTree = "<group>"; };
@@ -131,7 +133,8 @@
 			isa = PBXGroup;
 			children = (
 				81DB27592619CC8300F7C0CF /* GoogleAuthenticationManager.swift */,
-				81DB27562619CBCC00F7C0CF /* GoogleSignInButton.swift */,
+				8185341E26762B6600B7EE2F /* GoogleSignInButtonLight.swift */,
+				8185342026762B6B00B7EE2F /* GoogleSignInButtonDark.swift */,
 			);
 			path = UIViewRepresentable;
 			sourceTree = "<group>";
@@ -370,7 +373,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				8185F1EA261B42490063142D /* KeychainItem.swift in Sources */,
-				81DB27572619CBCC00F7C0CF /* GoogleSignInButton.swift in Sources */,
 				81FE7D582619DD0900F612B7 /* GoogleAuthenticationDelegate.swift in Sources */,
 				81A3BD6A261B40F40056813B /* AppleUserInfoView.swift in Sources */,
 				81DB27542619CAF000F7C0CF /* AppDelegate.swift in Sources */,
@@ -379,6 +381,7 @@
 				8185F1FC261C876F0063142D /* Constants.swift in Sources */,
 				81A3BD66261B3FAD0056813B /* AppleAuthentication.swift in Sources */,
 				8185F211261C9D470063142D /* SharedAuthentication.swift in Sources */,
+				8185342126762B6B00B7EE2F /* GoogleSignInButtonDark.swift in Sources */,
 				8163F288261DC664006032CF /* Visit.swift in Sources */,
 				8163F28B261DC70B006032CF /* Visitors.swift in Sources */,
 				8185F20C261C9CEF0063142D /* SignOutButtonView.swift in Sources */,
@@ -390,6 +393,7 @@
 				81DB272F2619C4A300F7C0CF /* AuthServicesExampleApp.swift in Sources */,
 				81A3BD6E261B410B0056813B /* AppleSignInView.swift in Sources */,
 				81FE7D5C2619E02E00F612B7 /* GoogleUserInfoView.swift in Sources */,
+				8185341F26762B6600B7EE2F /* GoogleSignInButtonLight.swift in Sources */,
 				8163F2752619FC55006032CF /* GoogleAuthenticationView.swift in Sources */,
 				8163F296261DD02D006032CF /* JSONSendError.swift in Sources */,
 				81DB275D2619CDFE00F7C0CF /* GoogleSignInView.swift in Sources */,
