@@ -36,6 +36,9 @@ struct AppleAuthenticationView: View {
                 
                 if !googleAuthenticationDelegate.signedIn {
                     
+                    WelcomeMessageView()
+                        .padding(10)
+
                     AppleSignInView()
 
                 }
