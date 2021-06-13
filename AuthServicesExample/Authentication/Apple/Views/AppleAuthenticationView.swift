@@ -24,6 +24,14 @@ struct AppleAuthenticationView: View {
                 // When user is signed in to Apple, show information from that source
                 AppleUserInfoView()
                 
+            } else if appleAuthenticationStore.userStatus == .indeterminate {
+                
+                VStack {
+                    Spacer()
+                    ProgressView("Checking authentication status…")
+                    Spacer()
+                }
+                
             } else {
                 
                 if !googleAuthenticationDelegate.signedIn {
