@@ -14,7 +14,7 @@ struct WelcomeMessageView: View {
         
         VStack {
             
-            Text("Please sign in to use the application.")
+            Text("Please sign in with your LCS email to use LCS Market.")
                 .font(.title2)
             
             Image("Authenticate")
