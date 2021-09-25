@@ -27,21 +27,35 @@ struct AuthenticatedView: View {
     
     var body: some View {
         
-        VStack(alignment: .leading) {
-            
-            // Show user's name
-            HStack {
-                Text("\(sharedAuthenticationStore.userName)")
-                    .font(.title)
-                    .minimumScaleFactor(0.75)
-                Spacer()
-            }
             
             // Show Categories of the app
-            
-        }
-        .padding()
-        .onAppear() {
+            List {
+                NavigationLink(destination: AuthenticatedView()) {
+                    // Provide the label for the navigation link
+                    Text("Tutoring")
+                }
+                NavigationLink(destination: AuthenticatedView()) {
+                    // Provide the label for the navigation link
+                    Text("Clothes")
+                }
+                NavigationLink(destination: AuthenticatedView()) {
+                    // Provide the label for the navigation link
+                    Text("Textbooks & Notes")
+                }
+                NavigationLink(destination: AuthenticatedView()) {
+                    // Provide the label for the navigation link
+                    Text("OE Gear")
+                }
+                NavigationLink(destination: AuthenticatedView()) {
+                    // Provide the label for the navigation link
+                    Text("Food")
+                }
+                NavigationLink(destination: AuthenticatedView()) {
+                    // Provide the label for the navigation link
+                    Text("Miscellaneous")
+                }
+            }
+            .onAppear() {
             //dataStore.refreshFromRemoteJSONSource()
             moodShareCount = 0
         }
