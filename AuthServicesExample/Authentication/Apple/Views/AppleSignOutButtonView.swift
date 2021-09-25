@@ -41,7 +41,7 @@ struct AppleSignOutButtonView: View {
             defaults.setValue(true, forKey: signedOutKey)
             
         }) {
-            Text("Sign out with Apple")
+            Text("Sign out")
         }
         .padding(.bottom)
 

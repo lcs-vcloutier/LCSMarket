@@ -32,7 +32,7 @@ struct GoogleSignOutButtonView: View {
             sharedAuthenticationStore.userEmail = ""
 
         }) {
-            Text("Sign out with Google")
+            Text("Sign out")
         }
         .padding(.bottom)
         
