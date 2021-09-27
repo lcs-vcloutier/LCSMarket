@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		2A4E282526F9499D00E0BC9C /* credentials.plist in Resources */ = {isa = PBXBuildFile; fileRef = 2A4E282426F9499D00E0BC9C /* credentials.plist */; };
+		2AD79AB02702656E00582EB6 /* AccountView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AD79AAF2702656E00582EB6 /* AccountView.swift */; };
 		81029BE1261C9F3A0019386F /* AppleSignOutButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81029BE0261C9F3A0019386F /* AppleSignOutButtonView.swift */; };
 		81029BE5261CA0AD0019386F /* SignInButtonsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81029BE4261CA0AD0019386F /* SignInButtonsView.swift */; };
 		81029BE8261CA3BD0019386F /* AuthenticatedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81029BE7261CA3BD0019386F /* AuthenticatedView.swift */; };
@@ -50,6 +51,7 @@
 
 /* Begin PBXFileReference section */
 		2A4E282426F9499D00E0BC9C /* credentials.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = credentials.plist; sourceTree = "<group>"; };
+		2AD79AAF2702656E00582EB6 /* AccountView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountView.swift; sourceTree = "<group>"; };
 		81029BE0261C9F3A0019386F /* AppleSignOutButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppleSignOutButtonView.swift; sourceTree = "<group>"; };
 		81029BE4261CA0AD0019386F /* SignInButtonsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInButtonsView.swift; sourceTree = "<group>"; };
 		81029BE7261CA3BD0019386F /* AuthenticatedView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticatedView.swift; sourceTree = "<group>"; };
@@ -267,6 +269,7 @@
 				81DB27302619C4A300F7C0CF /* WelcomeView.swift */,
 				81853422267633EC00B7EE2F /* WelcomeMessageView.swift */,
 				81029BE7261CA3BD0019386F /* AuthenticatedView.swift */,
+				2AD79AAF2702656E00582EB6 /* AccountView.swift */,
 				81DB27322619C4A400F7C0CF /* Assets.xcassets */,
 				8163F2782619FDB1006032CF /* AuthServicesExample.entitlements */,
 				2A4E282426F9499D00E0BC9C /* credentials.plist */,
@@ -403,6 +406,7 @@
 				81FE7D5C2619E02E00F612B7 /* GoogleUserInfoView.swift in Sources */,
 				8185341F26762B6600B7EE2F /* GoogleSignInButtonLight.swift in Sources */,
 				8163F2752619FC55006032CF /* GoogleAuthenticationView.swift in Sources */,
+				2AD79AB02702656E00582EB6 /* AccountView.swift in Sources */,
 				8163F296261DD02D006032CF /* JSONSendError.swift in Sources */,
 				81DB275D2619CDFE00F7C0CF /* GoogleSignInView.swift in Sources */,
 				8163F292261DCA69006032CF /* NewVisit.swift in Sources */,

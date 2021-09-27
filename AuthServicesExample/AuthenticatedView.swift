@@ -30,6 +30,10 @@ struct AuthenticatedView: View {
             
             // Show Categories of the app
             List {
+                NavigationLink(destination: AccountView()) {
+                    // Provide the label for the navigation link
+                    Text("Your Account")
+                }
                 NavigationLink(destination: AuthenticatedView()) {
                     // Provide the label for the navigation link
                     Text("Tutoring")
